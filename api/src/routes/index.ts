@@ -7,7 +7,7 @@ import TaskRoutes from 'routes/task.routes'
 const router = Router()
 
 const { NOT_FOUND } = STATUS_CODES
-const { URL_NOT_FOUND } = ERROR_CODES
+const { NOT_FOUND: URL_NOT_FOUND } = ERROR_CODES
 
 router.get('/', (_req, res) => {
   res.send('Welcome to task management System')

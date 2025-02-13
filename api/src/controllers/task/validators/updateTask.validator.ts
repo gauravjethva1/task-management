@@ -12,8 +12,8 @@ export const updateTaskSchema = yup.object({
       )
   }),
   body: yup.object({
-    title: yup.string().required('Task Title is required'),
-    description: yup.string().required('Task Description is required'),
+    // title: yup.string().required('Task Title is required'),
+    // description: yup.string().required('Task Description is required'),
     status: yup
       .string()
       .optional()

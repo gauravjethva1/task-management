@@ -1,5 +1,9 @@
-import { createTask, getTasks, updateTask } from 'controllers/task'
-import { createTaskSchema, updateTaskSchema } from 'controllers/task/validators'
+import { createTask, deleteTask, getTasks, updateTask } from 'controllers/task'
+import {
+  createTaskSchema,
+  deleteTaskSchema,
+  updateTaskSchema
+} from 'controllers/task/validators'
 import { Router } from 'express'
 import { validate } from 'middleware'
 
@@ -19,5 +23,10 @@ router.post('/', validate(createTaskSchema), createTask)
  * Update Task
  */
 router.patch('/:taskId', validate(updateTaskSchema), updateTask)
+
+/**
+ * Delete Task
+ */
+router.delete('/:taskId', validate(deleteTaskSchema), deleteTask)
 
 export default router
